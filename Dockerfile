@@ -11,3 +11,6 @@ RUN cmake .. -DENABLE_SOAPYSDR=OFF
 RUN make
 RUN make install
 
+#clean up some space
+WORKDIR /
+RUN rm -r /usr/src/rtl_433
