@@ -15,3 +15,14 @@ ENV LOGNAME="environment.csv"
 
 ENTRYPOINT rtl_433 -F $DATATYPE:/tmp/$LOGNAME -T 60 && cat /tmp/$LOGNAME
 ```
+
+Alternatively specify a MQTT broker
+
+```
+FROM va7eex/rtl433:latest
+
+ENV MQTT_IP=mqtt-broker
+ENV MQTT_PORT=1883
+
+ENTRYPOINT rtl_433 -M newmodel -F mqtt://$MQTT_IP:$MQTT_PORT,retain=0,devices=sensors/rtl_433/[model:""]/[id:0]
+```
