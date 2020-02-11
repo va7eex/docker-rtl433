@@ -5,6 +5,8 @@ This justs builds rtl_433 in alpine for use in other containers so I don't have 
 
 You can find the full source and documentation at https://github.com/merbanan/rtl_433.
 
+For this to work at all the hardware host that you are running docker on **requires** an RTLSDR USB dongle plugged in.
+
 Example dockerfile based upon this:
 
 ```
