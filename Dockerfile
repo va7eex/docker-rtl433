@@ -8,5 +8,4 @@ RUN git clone --recursive https://github.com/merbanan/rtl_433
 RUN mkdir /usr/src/rtl_433/build
 WORKDIR /usr/src/rtl_433/build
 RUN cmake .. -DENABLE_SOAPYSDR=OFF
-RUN make
-RUN make install
+RUN make && make install
