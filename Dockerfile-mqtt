@@ -1,22 +1,13 @@
 FROM va7eex/rtl433:latest
 
-
-
 ENV MQTT_IP=mqtt-broker
 
 ENV MQTT_PORT=1883
 
 #can be 'si', 'customary', or 'native'
-
 ENV UNITS=si
-
 ENV TZ=Etc/UTC
 
-
-
 ENTRYPOINT cp /usr/share/zoneinfo/$TZ /etc/localtime \
-
 	echo $TZ > /etc/timezone \
-
 	rtl_433 -M newmodel -F mqtt://$MQTT_IP:$MQTT_PORT,retain=0,devices=sensors/rtl_433/[model:""]/[id:0] -C $UNITS
-
