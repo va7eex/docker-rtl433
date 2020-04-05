@@ -18,7 +18,7 @@ ENV LOGNAME="environment.csv"
 ENTRYPOINT rtl_433 -F $DATATYPE:/tmp/$LOGNAME -T 60 && cat /tmp/$LOGNAME
 ```
 
-Alternatively specify a MQTT broker, this is also accessible pre-built via the `va7eex/rtl433:latest-mqtt` tag
+Alternatively specify a MQTT broker, this is also accessible pre-built via the `va7eex/rtl433:mqtt` tag
 
 ```
 FROM va7eex/rtl433:latest

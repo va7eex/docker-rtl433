@@ -1,7 +1,9 @@
 FROM va7eex/rtl433:latest
 
 ENV MQTT_IP=mqtt-broker
+
 ENV MQTT_PORT=1883
+
 #can be 'si', 'customary', or 'native'
 ENV UNITS=si
 ENV TZ=Etc/UTC
