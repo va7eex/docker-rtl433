@@ -7,6 +7,7 @@ ENV MQTT_PORT=1883
 #can be 'si', 'customary', or 'native'
 ENV UNITS=si
 ENV TZ=Etc/UTC
+ENV INDEX=0 #device index, in the event there are multiple SDRs plugged in
 
 COPY entrypoint.sh /usr/share
 
