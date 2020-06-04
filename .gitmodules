@@ -1,0 +1,3 @@
+[submodule "lib/rtl_433"]
+	path = lib/rtl_433
+	url = https://github.com/merbanan/rtl_433
