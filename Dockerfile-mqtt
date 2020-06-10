@@ -1,4 +1,4 @@
-FROM va7eex/rtl433:latest
+FROM va7eex/rtl433:base
 
 ENV MQTT_IP=mqtt-broker
 ENV MQTT_PORT=1883
