@@ -79,7 +79,7 @@ jobs:
           context: .
           file: Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ghcr.io/${GITHUB_REPOSITORY_OWNER}/rtl433:base
+          tags: ${GITHUB_REPOSITORY_OWNER}/rtl433:base
           labels: ${{ steps.meta.outputs.labels }}
 
       - name: Build and push Docker image (MQTT)
@@ -89,7 +89,7 @@ jobs:
           context: .
           file: Dockerfile-mqtt
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ghcr.io/${GITHUB_REPOSITORY_OWNER}/rtl433:mqtt
+          tags: ${GITHUB_REPOSITORY_OWNER}/rtl433:mqtt
           labels: ${{ steps.meta.outputs.labels }}
 
       # Sign the resulting Docker image digest except on PRs.
