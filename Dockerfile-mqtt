@@ -1,13 +1,12 @@
-FROM va7eex/rtl433:base
+FROM ghcr.io/va7eex/rtl433:base
 
-ENV MQTT_IP=mqtt-broker
-ENV MQTT_PORT=1883
-
-#can be 'si', 'customary', or 'native'
-ENV UNITS=si
-ENV TZ=Etc/UTC
-#device index, in the event there are multiple SDRs plugged in
-ENV DEVICEINDEX=0
+ENV MQTT_IP=mqtt-broker \
+    MQTT_PORT=1883 \
+    #can be 'si', 'customary', or 'native'
+    UNITS=si \
+    TZ=Etc/UTC \
+    #device index, in the event there are multiple SDRs plugged in
+    DEVICEINDEX=0
 
 COPY entrypoint.sh /usr/share
 

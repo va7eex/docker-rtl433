@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:latest
 
 RUN apk add --no-cache --update git libusb-dev libtool build-base cmake
 RUN apk add --no-cache --repository https://dl-3.alpinelinux.org/alpine/edge/main librtlsdr-dev
